@@ -9,7 +9,6 @@ def podaj_imie_nazwisko(name: str, surname: str) -> str:
 result = podaj_imie_nazwisko("Katarzyna", "Frelek")
 print(result)
 
-
 # Zadanie 2
 
 
@@ -38,8 +37,8 @@ if czy_parzysta:
 else:
     print("Liczba nieparzysta")
 
-
 # Zadanie 4
+
 
 def podaj_trzy_liczby(liczba1: int, liczba2: int, liczba3: int) -> bool:
     czy_suma_dwoch_pierwszych_wieksza_od_trzeciej = liczba1 + liczba2 >= liczba3
@@ -48,3 +47,28 @@ def podaj_trzy_liczby(liczba1: int, liczba2: int, liczba3: int) -> bool:
 
 result = podaj_trzy_liczby(1, 2, 5)
 print(result)
+
+# Zadanie 5
+
+
+def podaj_dwa_argumenty(lista: list, liczba: int) -> bool:
+    czy_liczba_w_liscie = liczba in lista
+    return czy_liczba_w_liscie
+
+
+result = podaj_dwa_argumenty([13, 45, 742], 13)
+print(result)
+
+# Zadanie 6
+
+
+def podaj_dwie_listy(lista1: list, lista2: list) -> list:
+    zlaczenie_list = list(set(lista1 + lista2))
+    for x in range(len(zlaczenie_list)):
+        zlaczenie_list[x] = zlaczenie_list[x] ** 3
+    return zlaczenie_list
+
+
+result = podaj_dwie_listy([1, 2, 3, 4], [3, 4, 5, 6])
+print(result)
+
