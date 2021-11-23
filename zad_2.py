@@ -1,27 +1,3 @@
-# Zadanie 1
-
-class Student:
-    def __init__(self, name, marks):
-        self.name = name
-        self.marks = marks
-
-    def is_passed(self) -> bool:
-        if self.marks > 50:
-            return True
-        else:
-            return False
-
-
-student1 = Student("Kasia", 85)
-student2 = Student("Mateusz", 50)
-
-print(student1.is_passed())
-print(student2.is_passed())
-
-
-# Zadanie 2
-
-
 class Library:
     def __init__(self, city, street, zip_code, open_hours: str, phone):
         self.city = city
@@ -48,10 +24,10 @@ class Employee:
         self.phone = phone
 
     def __str__(self):
-        return f'Pracownik {self.first_name} {self.last_name}, urodzony dnia {self.birth_date}. '\
-               f'Zatrudniony dnia {self.hire_date}. '\
+        return f'{self.first_name} {self.last_name} (ur. dnia {self.birth_date}), '\
+               f'zatrudniony dnia {self.hire_date}. '\
                f'Adres zamieszkania: ulica {self.street}, {self.city}, {self.zip_code}. '\
-               f'Numer telefonu: {self.phone}'
+               f'Tel: {self.phone}'
 
 
 class Student:
@@ -65,9 +41,9 @@ class Student:
         self.phone = phone
 
     def __str__(self):
-        return f'Student {self.first_name} {self.last_name}, urodzony dnia {self.birth_date}. '\
-               f'Adres zamieszkania: ulica {self.street}, {self.city}, {self.zip_code}. '\
-               f'Numer telefonu: {self.phone}'
+        return f'{self.first_name} {self.last_name} (ur. {self.birth_date}), '\
+               f'adres zamieszkania: ulica {self.street}, {self.city}, {self.zip_code}. '\
+               f'Tel: {self.phone}'
 
 
 class Book:
@@ -93,8 +69,9 @@ class Order:
         self.order_date = order_date
 
     def __str__(self):
-        return f'Zamowienie studenta {self.student.__str__()} z dnia {self.order_date}: {self.books.__str__()} ' \
-               f'Przygotowane przez pracownika: {self.employee.__str__()}.'
+        return f'Zamowienie studenta: {self.student.__str__()} ' \
+               f'Zamowienie złozone dnia {self.order_date}: {self.books.__str__()} ' \
+               f'Zamowienie przygotowane przez pracownika: {self.employee.__str__()}.'
 
 
 library1 = Library("Katowice", "Brynowska", "40-666", "8-16", "700-800-900")
